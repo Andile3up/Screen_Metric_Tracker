@@ -64,7 +64,7 @@ for file in ../data/GPS/upload/*; do
   # Commands to run on "$file"
   if [[ -f $file ]]; then
       echo "Processing: $file"
-      python uploader.py $file GPS
+      python uploader.py $file GPS $device_id
       if [ $? -eq 0 ]; then
         rm $file
       fi

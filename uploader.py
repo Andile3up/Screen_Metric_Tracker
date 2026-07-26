@@ -1,7 +1,7 @@
 import boto3
 import sys
 
-if(len(sys.argv)!=3):
+if(len(sys.argv)!=4):
 	print("Total arguments:", len(sys.argv))
 	sys.exit(1)
 	
@@ -9,6 +9,8 @@ file_name=sys.argv[1]
 file_split=file_name.split("/")
 
 data_group=sys.argv[2]
+
+device_id=sys.argv[3]
 
 process_file_name=file_split[-1]
 process_file_name=process_file_name.split(".")
@@ -23,7 +25,7 @@ date=process_file_name_no_file_type[2].split('-')
 year=date[0]
 month=date[1]
 day=date[2]
-device_id="40000"
+
 print(data_group)
 print('vehicle/'+data_group+'/device_id='+device_id+'/year='+year+'/month='+month+'/day='+day+"/"+final_file_name)
 

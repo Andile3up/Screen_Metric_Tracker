@@ -17,8 +17,8 @@ ser = serial.Serial(
         bytesize=serial.EIGHTBITS,
         timeout=1
 )
-Impressions_file = open("data/Impressions/raw/raw_"+str(trip_id)+"_"+str(today)+".txt", "a")
-GPS_file = open("data/GPS/raw/raw_"+str(trip_id)+"_"+str(today)+".txt", "a")
+Impressions_file = open("../data/Impressions/raw/raw_"+str(trip_id)+"_"+str(today)+".txt", "a")
+GPS_file = open("../data/GPS/raw/raw_"+str(trip_id)+"_"+str(today)+".txt", "a")
 while 1:
         x=ser.readline()
         line=x.decode(encoding="utf-8")
