@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for file in data/Impressions/raw/*; do
+for file in ../data/Impressions/raw/*; do
   # Commands to run on "$file"
   if [[ -f $file ]]; then
       echo "Processing raw: $file"
@@ -18,7 +18,7 @@ for file in data/Impressions/raw/*; do
   fi
 done
 
-for file in data/Impressions/processed/*; do
+for file in ../data/Impressions/processed/*; do
   # Commands to run on "$file"
   if [[ -f $file ]]; then
       echo "Processing: $file"
@@ -29,7 +29,7 @@ for file in data/Impressions/processed/*; do
   fi
 done
 
-for file in data/Impressions/upload/*; do
+for file in ../data/Impressions/upload/*; do
   # Commands to run on "$file"
   if [[ -f $file ]]; then
       echo "Processing: $file"
@@ -42,7 +42,7 @@ done
 #==============================================
 
 
-for file in data/GPS/raw/*; do
+for file in ../data/GPS/raw/*; do
   # Commands to run on "$file"
   if [[ -f $file ]]; then
       echo "Processing raw: $file"
@@ -60,7 +60,7 @@ for file in data/GPS/raw/*; do
   fi
 done
 
-for file in data/GPS/upload/*; do
+for file in ../data/GPS/upload/*; do
   # Commands to run on "$file"
   if [[ -f $file ]]; then
       echo "Processing: $file"
