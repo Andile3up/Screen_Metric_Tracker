@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#================================================================
 for file in ~/3up_workspace/data/Impressions/raw/*; do
   # Commands to run on "$file"
   if [[ -f $file ]]; then

@@ -5,9 +5,12 @@ import os
 import logging
 import sys
 
-print("Total arguments:", len(sys.argv))
 print("Script name:", sys.argv[0])
 print("Arguments:", sys.argv[:1])
+
+if(len(sys.argv)!=4):
+	print("Total arguments:", len(sys.argv))
+	sys.exit(1)
 
 logging.getLogger('boto').setLevel(logging.INFO)
 
