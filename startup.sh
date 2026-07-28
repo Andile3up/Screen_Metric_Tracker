@@ -1,6 +1,5 @@
 ! /usr/bin/bash
 #git pull /// figure out a way of doing git pull more effciently
 #gcc main.c -o runn
-sleep 30
-nohup /home/admin3upads/Screen_Metric_Tracker/serial_logger
-#touch /home/admin3upads/Screen_Metric_Tracker/comming_from
+nohup python /home/admin3upads/3up_workspace/Screen_Metric_Tracker/serial_logger.py
+touch /home/admin3upads/3up_workspace/small_file

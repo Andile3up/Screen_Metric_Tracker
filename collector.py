@@ -1,6 +1,7 @@
 import datetime
 import re
 import sys
+import hashlib
 
 print("Total arguments:", len(sys.argv))
 print("Script name:", sys.argv[0])
@@ -50,9 +51,9 @@ file_split=file_name.split("/")
 process_file_name=file_split[-1][3:]
 print(process_file_name)
     
-Impressions_file = open("data/Impressions/processed/processed"+process_file_name, "a")
+Impressions_file = open("../data/Impressions/processed/processed"+process_file_name, "a")
 for key, value in big.items():
-    print(key,value,value[1]-value[0])
-    Impressions_file.write(key+","+str(int(value[0]))+","+str(int(value[1]))+"\n")
+    print(hashlib.md5(key.encode('utf-8')).hexdigest(),key[:8],value,value[1]-value[0])
+    Impressions_file.write(hashlib.md5(key.encode('utf-8')).hexdigest()+","+key[:8]+","+str(int(value[0]))+","+str(int(value[1]))+"\n")
     
 Impressions_file.close()
