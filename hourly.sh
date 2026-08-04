@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source ~/threeUp/bin/activate
+
 #================================================================
 for file in ~/3up_workspace/data/Impressions/raw/*; do
   # Commands to run on "$file"
